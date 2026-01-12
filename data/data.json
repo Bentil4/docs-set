@@ -1,0 +1,38 @@
+{
+    "tutorials": [
+        {
+            "name": "JavaScript.info",
+            "description": "Modern JavaScript tutorials from basics to advanced.",
+            "url": "https://javascript.info/"
+        },
+        {
+            "name": "FreeCodeCamp",
+            "description": "Interactive coding tutorials and certifications.",
+            "url": "https://www.freecodecamp.org/"
+        }
+    ],
+    "documentation": [
+        {
+            "name": "MDN Web Docs",
+            "description": "Official documentation for web technologies.",
+            "url": "https://developer.mozilla.org/"
+        },
+        {
+            "name": "Angular Docs",
+            "description": "Official Angular framework documentation.",
+            "url": "https://angular.dev/"
+        }
+    ],
+    "tools": [
+        {
+            "name": "VS Code",
+            "description": "Lightweight and powerful code editor.",
+            "url": "https://code.visualstudio.com/"
+        },
+        {
+            "name": "Postman",
+            "description": "API testing and development tool.",
+            "url": "https://www.postman.com/"
+        }
+    ]
+}
