@@ -1,9 +1,10 @@
-@use './variable' as *;
+@use "./variable" as *;
 
 .dashboard {
   &__category {
     padding: 2rem 1rem;
     background-color: $color-neutral-400;
+    width: 33.33%;
   }
 
   &__category-list {
@@ -16,7 +17,6 @@
     display: flex;
     flex-direction: column;
     height: 200px;
-    width: 340px;
     background-color: $color-neutral-200;
     padding: 20px;
     gap: 2rem;
@@ -40,11 +40,54 @@
   }
 
   &__category-item-link:hover {
-    background-color: $hover-color;
+    background-color: rgb(35, 95, 144);
     transition: all 0.3s ease-in-out;
   }
 
   &__category-item-link svg {
     width: 24px;
+  }
+}
+
+// Tablet View
+@media (max-width: 1023px) {
+  .dashboard {
+    &__main-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__category {
+      width: 100%;
+    }
+  }
+}
+
+// Mobile View
+
+@media (max-width: 767px) {
+  .dashboard {
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+    }
+    &__main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__category {
+      width: 100%;
+    }
+
+    &__sidebar {
+      display: none;
+    }
   }
 }

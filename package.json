@@ -7,7 +7,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "build: sass": "sass sass:css",
+    "build: css": "sass sass:css",
     "preview": "vite preview"
   },
   "devDependencies": {
