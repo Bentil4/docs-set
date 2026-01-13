@@ -86,8 +86,6 @@
       width: 100%;
     }
 
-    &__sidebar {
-      display: none;
-    }
+    // Removed display: none from sidebar - handled by positioning in _layout.scss
   }
 }
