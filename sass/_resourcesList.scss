@@ -1,0 +1,50 @@
+@use './variable' as *;
+
+.dashboard {
+  &__category {
+    padding: 2rem 1rem;
+    background-color: $color-neutral-400;
+  }
+
+  &__category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__category-item {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 340px;
+    background-color: $color-neutral-200;
+    padding: 20px;
+    gap: 2rem;
+    border-radius: 10px;
+  }
+
+  &__category-item-title {
+    font-weight: bold;
+  }
+
+  &__category-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $color-neutral-900;
+    cursor: pointer;
+    background-color: $sidebar-color;
+    padding: 5px 10px;
+    color: $color-neutral-100;
+    border-radius: 10px;
+  }
+
+  &__category-item-link:hover {
+    background-color: $hover-color;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__category-item-link svg {
+    width: 24px;
+  }
+}
