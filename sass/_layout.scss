@@ -11,9 +11,40 @@
   }
   &__header {
     height: 10%;
-    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 30rem;
+    padding: 20px 2rem;
     background-color: $color-neutral-300;
     color: $color-neutral-900;
+  }
+
+  &__search {
+    border: $color-neutral-900 solid 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search svg {
+    height: 24px;
+    padding-left: 1rem;
+    color: $color-neutral-900;
+    opacity: 0.6;
+  }
+
+  &__search-input {
+    width: 20rem;
+    padding: 20px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__search-input:focus {
+    border: none;
   }
 
   &__content {

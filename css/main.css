@@ -10,9 +10,35 @@
 }
 .dashboard__header {
   height: 10%;
-  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2rem;
   background-color: #dee2e6;
   color: #212529;
+}
+.dashboard__search {
+  border: #212529 solid 1px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.dashboard__search svg {
+  height: 24px;
+  padding-left: 1rem;
+  color: #212529;
+  opacity: 0.6;
+}
+.dashboard__search-input {
+  width: 20rem;
+  padding: 20px 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.dashboard__search-input:focus {
+  border: none;
 }
 .dashboard__content {
   display: flex;
