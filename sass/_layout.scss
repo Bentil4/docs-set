@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // gap: 30rem;
     padding: 20px 2rem;
     background-color: $color-neutral-300;
     color: $color-neutral-900;
@@ -103,7 +102,7 @@
     flex-direction: column;
     cursor: pointer;
     position: fixed;
-    top: 100px;
+    top: 30px;
     left: 20px;
     z-index: 1001;
     background-color: rgba(255, 255, 255, 0.9);
@@ -173,6 +172,29 @@
 
     &__main-content {
       width: 100%;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__heading {
+      align-content: flex-start;
+      text-align: left;
+    }
+
+    &__search {
+      position: absolute;
+      top: 12%;
+    }
+
+    &__search-input {
+      padding: 10px 0;
+    }
+
+    &__main-content{
+      border-top: 0;
     }
   }
 }

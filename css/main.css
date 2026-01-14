@@ -90,7 +90,7 @@
   flex-direction: column;
   cursor: pointer;
   position: fixed;
-  top: 100px;
+  top: 30px;
   left: 20px;
   z-index: 1001;
   background-color: rgba(255, 255, 255, 0.9);
@@ -148,6 +148,24 @@
   }
   .dashboard__main-content {
     width: 100%;
+  }
+  .dashboard__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard__heading {
+    align-content: flex-start;
+    text-align: left;
+  }
+  .dashboard__search {
+    position: absolute;
+    top: 12%;
+  }
+  .dashboard__search-input {
+    padding: 10px 0;
+  }
+  .dashboard__main-content {
+    border-top: 0;
   }
 }
 .dashboard__category {
