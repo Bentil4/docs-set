@@ -10,15 +10,44 @@
   <body>
     <main class="dashboard">
       <section class="dashboard__container">
+        <!-- header -->
         <header class="dashboard__header">
-          <h1>Dashboard</h1>
-          <p>Your Hub for Developer resources</p>
+          <span class="dashboard__heading"
+            ><h1>Dashboard</h1>
+            <p>Your Hub for Developer resources</p></span
+          >
+          <!-- search bar -->
+          <section class="dashboard__search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+
+            <input
+              class="dashboard__search-input"
+              id="searchInput"
+              type="search"
+              placeholder="Search for resources"
+            />
+          </section>
         </header>
+        <!-- content -->
         <main class="dashboard__content">
+          <!-- sidebar -->
           <aside class="dashboard__sidebar">
             <nav class="dashboard__nav">
               <ul class="dashboard__list">
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -35,7 +64,7 @@
                   </svg>
                   All Resources
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="tutorials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -52,7 +81,7 @@
                   </svg>
                   Tutorials
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="documentation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -69,7 +98,7 @@
                   </svg>
                   Documentation
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="tools">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -96,7 +125,7 @@
             <span></span>
             <span></span>
           </section>
-
+          <!-- main -->
           <section class="dashboard__main-content" id="main-content"></section>
         </main>
       </section>

@@ -11,9 +11,39 @@
   }
   &__header {
     height: 10%;
-    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2rem;
     background-color: $color-neutral-300;
     color: $color-neutral-900;
+  }
+
+  &__search {
+    border: $color-neutral-900 solid 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search svg {
+    height: 24px;
+    padding-left: 1rem;
+    color: $color-neutral-900;
+    opacity: 0.6;
+  }
+
+  &__search-input {
+    width: 20rem;
+    padding: 20px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__search-input:focus {
+    border: none;
   }
 
   &__content {
@@ -23,18 +53,8 @@
     display: flex;
     width: 85%;
     padding: 2rem;
-    background-color: $color-neutral-200;
     gap: 1rem;
     border-top: 2px solid $sidebar-color;
-  }
-  &__sidebar {
-    width: 15%;
-    height: 100vh;
-    padding: 20px 0;
-    background-color: rgb(3, 46, 80);
-    color: $color-neutral-100;
-    text-decoration: none;
-    list-style: none;
   }
 
   &__nav {
@@ -72,8 +92,8 @@
     flex-direction: column;
     cursor: pointer;
     position: fixed;
-    top: 100px;
-    left: 20px;
+    top: 7px;
+    right: 20px;
     z-index: 1001;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
@@ -100,6 +120,7 @@
   }
 
   &__sidebar {
+    position: fixed;
     width: 15%;
     height: 100vh;
     padding: 20px 0;
@@ -143,5 +164,79 @@
     &__main-content {
       width: 100%;
     }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__heading {
+      align-content: flex-start;
+      text-align: left;
+    }
+
+    &__search {
+      position: absolute;
+      top: 12%;
+    }
+
+    &__search-input {
+      padding: 10px 0;
+    }
+
+    &__main-content {
+      border-top: 0;
+    }
   }
 }
+
+//Tablet view
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard {
+    &__sidebar {
+      width: 25%;
+    }
+  }
+}
+
+// Desktop view
+@media (min-width: 768px) {
+  .dashboard {
+    &__sidebar {
+      position: fixed;
+      width: 15%;
+      height: 90vh;
+      top: 10;
+      left: 0;
+    }
+
+    &__header {
+      position: sticky;
+      top: 0;
+    }
+
+    &__main-content {
+      margin-left: 15%;
+      width: calc(100% - 15%);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard {
+    &__sidebar {
+      position: fixed;
+      width: 25%;
+      height: 90vh;
+      top: 10;
+      left: 0;
+    }
+
+    &__main-content {
+      margin-left: 25%;
+      width: calc(100% - 15%);
+    }
+  }
+}
+
+
