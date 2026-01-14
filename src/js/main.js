@@ -10,6 +10,7 @@ fetch("./data/data.json")
     resourceList(allResources);
     initHamburgerMenu();
     searchResources();
+    initSidebar(); // Initialize sidebar functionality
   })
   .catch((error) => {
     (console.error("No data found"), error);
@@ -47,7 +48,12 @@ function searchResources() {
     searchInput.addEventListener("input", (e) => {
       const query = e.target.value.toLowerCase();
       const filteredResources = filterResources(allResources, query);
-      resourceList(filteredResources);
+      
+      if (Object.keys(filteredResources).length === 0 && query.trim() !== "") {
+        displaySearchNotFound();
+      } else {
+        resourceList(filteredResources);
+      }
     });
   }
 }
@@ -64,4 +70,40 @@ function filterResources(resources, query) {
     }
   }
   return filtered;
+}
+
+// Sidebar functionality
+function initSidebar() {
+  const sidebarItems = document.querySelectorAll(".dashboard__sidebar li");
+  sidebarItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const category = item.getAttribute("data-category");
+      if (category === "all") {
+        resourceList(allResources);
+      } else if (category) {
+        const filteredResources = filterResourcesByCategory(allResources, category);
+        resourceList(filteredResources);
+      }
+    });
+  });
+}
+
+// Filter resources by category
+function filterResourcesByCategory(resources, category) {
+  const filtered = {};
+  if (resources[category]) {
+    filtered[category] = resources[category];
+  }
+  return filtered;
+}
+
+// Display search not found message
+function displaySearchNotFound() {
+  const dashboard = document.getElementById("main-content");
+  dashboard.innerHTML = `
+    <section class="dashboard__search-not-found">
+      <h2>Search not found</h2>
+      <p>No resources match your search query. Try a different search term.</p>
+    </section>
+  `;
 }

@@ -10,6 +10,7 @@
   <body>
     <main class="dashboard">
       <section class="dashboard__container">
+        <!-- header -->
         <header class="dashboard__header">
           <span class="dashboard__heading"
             ><h1>Dashboard</h1>
@@ -40,11 +41,13 @@
             />
           </section>
         </header>
+        <!-- content -->
         <main class="dashboard__content">
+          <!-- sidebar -->
           <aside class="dashboard__sidebar">
             <nav class="dashboard__nav">
               <ul class="dashboard__list">
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -61,7 +64,7 @@
                   </svg>
                   All Resources
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="tutorials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -78,7 +81,7 @@
                   </svg>
                   Tutorials
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="documentation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -95,7 +98,7 @@
                   </svg>
                   Documentation
                 </li>
-                <li class="dashboard_items">
+                <li class="dashboard_items" data-category="tools">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -122,7 +125,7 @@
             <span></span>
             <span></span>
           </section>
-
+          <!-- main -->
           <section class="dashboard__main-content" id="main-content"></section>
         </main>
       </section>
