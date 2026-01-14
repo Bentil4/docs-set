@@ -5,15 +5,41 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>developer-dasboard</title>
-    <script type="module" crossorigin src="/assets/index--CiKKe84.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-cGmWtsss.css">
+    <script type="module" crossorigin src="/assets/index-Bp1Ys6zR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CKUhWJSX.css">
   </head>
   <body>
     <main class="dashboard">
       <section class="dashboard__container">
         <header class="dashboard__header">
-          <h1>Dashboard</h1>
-          <p>Your Hub for Developer resources</p>
+          <span class="dashboard__heading"
+            ><h1>Dashboard</h1>
+            <p>Your Hub for Developer resources</p></span
+          >
+          <!-- search bar -->
+          <section class="dashboard__search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+
+            <input
+              class="dashboard__search-input"
+              id="searchInput"
+              type="search"
+              placeholder="Search for resources"
+            />
+          </section>
         </header>
         <main class="dashboard__content">
           <aside class="dashboard__sidebar">

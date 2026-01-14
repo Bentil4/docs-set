@@ -1,15 +1,15 @@
 import { resourceList } from "./resourcesList";
-// import '../../css/main.css';
 
+// Fetch data
 export let allResources = {};
 fetch("./data/data.json")
   .then((response) => response.json())
   .then((data) => {
     allResources = data;
-    console.log(data);
 
-    resourceList();
+    resourceList(allResources);
     initHamburgerMenu();
+    searchResources();
   })
   .catch((error) => {
     (console.error("No data found"), error);
@@ -38,4 +38,30 @@ function initHamburgerMenu() {
       }
     });
   }
+}
+
+// Search functionality
+function searchResources() {
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
+      const filteredResources = filterResources(allResources, query);
+      resourceList(filteredResources);
+    });
+  }
+}
+
+//Filter resources based on a query string.
+function filterResources(resources, query) {
+  const filtered = {};
+  for (const category in resources) {
+    const filteredItems = resources[category].filter((resource) =>
+      resource.name.toLowerCase().includes(query)
+    );
+    if (filteredItems.length > 0) {
+      filtered[category] = filteredItems;
+    }
+  }
+  return filtered;
 }
