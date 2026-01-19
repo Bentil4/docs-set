@@ -24,7 +24,7 @@ export function resourceList(resources = allResources) {
 ${resource.name} </a>
         </section>
         
-        `
+        `,
       )
       .join("")}
     

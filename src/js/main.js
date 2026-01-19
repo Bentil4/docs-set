@@ -48,7 +48,7 @@ function searchResources() {
     searchInput.addEventListener("input", (e) => {
       const query = e.target.value.toLowerCase();
       const filteredResources = filterResources(allResources, query);
-      
+
       if (Object.keys(filteredResources).length === 0 && query.trim() !== "") {
         displaySearchNotFound();
       } else {
@@ -63,7 +63,7 @@ function filterResources(resources, query) {
   const filtered = {};
   for (const category in resources) {
     const filteredItems = resources[category].filter((resource) =>
-      resource.name.toLowerCase().includes(query)
+      resource.name.toLowerCase().includes(query),
     );
     if (filteredItems.length > 0) {
       filtered[category] = filteredItems;
@@ -81,7 +81,10 @@ function initSidebar() {
       if (category === "all") {
         resourceList(allResources);
       } else if (category) {
-        const filteredResources = filterResourcesByCategory(allResources, category);
+        const filteredResources = filterResourcesByCategory(
+          allResources,
+          category,
+        );
         resourceList(filteredResources);
       }
     });

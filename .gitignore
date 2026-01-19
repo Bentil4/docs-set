@@ -27,3 +27,9 @@ yarn-error.log
 .history/*
 .qodo
 
+
+.vscode
+/dist/
+.prettierignore
+.prettierrc
+eslint.config.js
