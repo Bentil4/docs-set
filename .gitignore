@@ -30,6 +30,3 @@ yarn-error.log
 
 .vscode
 /dist/
-.prettierignore
-.prettierrc
-eslint.config.js
